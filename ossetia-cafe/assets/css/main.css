@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    box-sizing: border-box;
+  }
+
+  body {
+    @apply font-sans font-light text-cocoa bg-cream-50;
+    font-size: 16px;
+    line-height: 1.7;
+  }
+
+  h1, h2, h3, h4, h5 {
+    @apply font-display;
+  }
+
+  a {
+    @apply transition-colors duration-300;
+  }
+
+  img {
+    @apply block w-full;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-block px-10 py-4 bg-clay text-cream-50 font-sans font-semibold text-sm tracking-widest uppercase
+           transition-all duration-500 hover:bg-clay-dark hover:tracking-ultra
+           relative overflow-hidden;
+  }
+
+  .btn-outline {
+    @apply inline-block px-10 py-4 border border-clay text-clay font-sans font-semibold text-sm tracking-widest uppercase
+           transition-all duration-500 hover:bg-clay hover:text-cream-50 hover:tracking-ultra;
+  }
+
+  .btn-ghost {
+    @apply inline-block px-10 py-4 border border-cream-300 text-cocoa font-sans font-semibold text-sm tracking-widest uppercase
+           transition-all duration-500 hover:border-clay hover:text-clay hover:tracking-ultra;
+  }
+
+  .section-label {
+    @apply font-sans text-xs font-semibold tracking-ultra uppercase text-clay mb-6;
+  }
+
+  .section-title {
+    @apply font-display text-5xl md:text-6xl lg:text-7xl font-medium leading-tight text-cocoa;
+  }
+
+  .input-field {
+    @apply w-full bg-transparent border-b border-cream-300 py-3 px-0 font-sans text-sm font-light text-cocoa
+           placeholder:text-cocoa/30 focus:outline-none focus:border-clay transition-colors duration-300;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Сайты для туризма Кавказа — демо-портфолио</title>
+  <meta name="description" content="Кастомные сайты под ключ для турбизнеса и гостеприимства Кавказа. Три живых демо: горные дома, кафе осетинской кухни, джип-туры." />
+  <meta property="og:title" content="Сайты для туризма Кавказа — демо-портфолио" />
+  <meta property="og:description" content="Три живых демо: горные дома, кафе осетинской кухни, джип-туры. Откройте любое." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #FAF7F1;
+      --ink: #18161270;       /* not used directly */
+      --text: #1B1813;
+      --muted: #8C8474;
+      --hair: rgba(27, 24, 19, 0.12);
+      --cabins: #B08A4F;
+      --cafe: #BB5436;
+      --tours: #D07A2E;
+      --accent: #1B1813;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; -webkit-font-smoothing: antialiased; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      font-weight: 300;
+      line-height: 1.65;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    a { color: inherit; text-decoration: none; }
+    .wrap { width: 100%; max-width: 920px; margin: 0 auto; padding: 0 28px; }
+    .serif { font-family: 'Cormorant Garamond', Georgia, serif; }
+    .eyebrow {
+      font-size: 11px; letter-spacing: 0.32em; text-transform: uppercase;
+      color: var(--muted); font-weight: 400;
+    }
+
+    /* ── Top row ─────────────────────────── */
+    .top { display: flex; align-items: center; justify-content: space-between; padding: 34px 0; }
+    .brand { font-family: 'Cormorant Garamond', serif; font-size: 18px; letter-spacing: 0.04em; }
+    .top a.link { font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); border-bottom: 1px solid transparent; padding-bottom: 2px; transition: color .3s, border-color .3s; }
+    .top a.link:hover { color: var(--text); border-color: var(--text); }
+
+    /* ── Intro ───────────────────────────── */
+    .intro { padding: 56px 0 40px; }
+    .intro h1 {
+      font-family: 'Cormorant Garamond', serif; font-weight: 400;
+      font-size: clamp(2.5rem, 6vw, 4.4rem); line-height: 1.04; letter-spacing: -0.01em;
+      margin: 20px 0 0; max-width: 16ch;
+    }
+    .intro p {
+      margin-top: 26px; max-width: 54ch; color: #4A453C; font-size: 1.02rem;
+    }
+
+    /* ── Demo list ───────────────────────── */
+    .list { border-top: 1px solid var(--hair); }
+    .row {
+      display: grid; grid-template-columns: 56px 1fr auto;
+      align-items: start; gap: 24px;
+      padding: 38px 4px; border-bottom: 1px solid var(--hair);
+      transition: padding-left .4s cubic-bezier(.19,1,.22,1), background .4s;
+    }
+    .row:hover { padding-left: 16px; background: rgba(27,24,19,0.015); }
+    .row .idx { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; color: var(--muted); line-height: 1.2; }
+    .row:hover .idx { color: var(--accent); }
+    .row .niche { font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--muted); }
+    .row .name {
+      font-family: 'Cormorant Garamond', serif; font-weight: 500;
+      font-size: clamp(1.7rem, 3.4vw, 2.5rem); line-height: 1.1; margin: 8px 0 10px;
+      transition: color .3s ease; color: var(--text);
+    }
+    .row:hover .name { color: var(--accent); }
+    .row .desc { font-size: 0.95rem; color: #5A554B; max-width: 46ch; }
+    .row .arrow {
+      font-family: 'Cormorant Garamond', serif; font-size: 1.7rem; color: var(--muted);
+      transform: translateX(0); transition: transform .4s cubic-bezier(.19,1,.22,1), color .3s;
+      align-self: center;
+    }
+    .row:hover .arrow { transform: translateX(8px); color: var(--accent); }
+
+    @media (max-width: 620px) {
+      .row { grid-template-columns: 1fr auto; gap: 16px; padding: 30px 2px; }
+      .row .idx { display: none; }
+      .row .arrow { font-size: 1.4rem; }
+    }
+
+    /* ── Tiers (slim) ────────────────────── */
+    .tiers { padding: 64px 0 8px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
+    @media (max-width: 620px) { .tiers { grid-template-columns: 1fr; gap: 24px; } }
+    .tiers .t .h { font-family: 'Cormorant Garamond', serif; font-size: 1.35rem; }
+    .tiers .t .p { font-size: 12px; letter-spacing: 0.08em; color: var(--muted); text-transform: uppercase; margin: 4px 0 8px; }
+    .tiers .t .d { font-size: 0.88rem; color: #5A554B; }
+    .tiers-label { padding-top: 56px; }
+
+    /* ── Footer ──────────────────────────── */
+    footer { margin-top: 80px; border-top: 1px solid var(--hair); padding: 32px 0 56px; }
+    .foot { display: flex; align-items: center; justify-content: space-between; gap: 18px; flex-wrap: wrap; }
+    .foot .contacts { display: flex; gap: 22px; }
+    .foot .contacts a { font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); border-bottom: 1px solid transparent; padding-bottom: 2px; transition: color .3s, border-color .3s; }
+    .foot .contacts a:hover { color: var(--text); border-color: var(--text); }
+    .foot .copy { font-size: 12px; color: var(--muted); }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+
+
+    <!-- Intro -->
+    <section class="intro">
+      <span class="eyebrow">Демо-портфолио · сайты для туризма Кавказа</span>
+      <h1>Три демо.<br />Выберите близкое.</h1>
+      <p>
+        Кастомные сайты под ключ для турбизнеса, баз отдыха и заведений Кавказа.
+        Ниже — три рабочих демо под разные ниши. Откройте любое.
+      </p>
+    </section>
+
+    <!-- Demo selection -->
+    <nav class="list" aria-label="Выбор демо">
+      <a class="row" href="ossetia-cabins/">
+        <span class="idx serif">01</span>
+        <span class="meta">
+          <span class="niche">База отдыха</span>
+          <span class="name">Аланские горные дома</span>
+          <span class="desc">Каталог домиков, карточки объектов с галереей и форма брони.</span>
+        </span>
+        <span class="arrow" aria-hidden="true">→</span>
+      </a>
+
+      <a class="row" href="ossetia-cafe/">
+        <span class="idx serif">02</span>
+        <span class="meta">
+          <span class="niche">Кафе · ресторан</span>
+          <span class="name">Фарн — осетинская кухня</span>
+          <span class="desc">Меню по категориям, история заведения и бронь столика.</span>
+        </span>
+        <span class="arrow" aria-hidden="true">→</span>
+      </a>
+
+      <a class="row" href="ossetia-tours/">
+        <span class="idx serif">03</span>
+        <span class="meta">
+          <span class="niche">Турагентство</span>
+          <span class="name">Дикий Кавказ — джип-туры</span>
+          <span class="desc">Каталог маршрутов, карточки туров с галереей и заявкой.</span>
+        </span>
+        <span class="arrow" aria-hidden="true">→</span>
+      </a>
+    </nav>
+
+    <!-- Tiers (slim) -->
+    <div class="tiers-label eyebrow">Тарифы</div>
+    <div class="tiers">
+      <div class="t">
+        <div class="h">Старт</div>
+        <div class="p">от 25 000 ₽</div>
+        <div class="d">Лендинг-визитка: одна страница, форма-заявка, адаптив, базовое SEO.</div>
+      </div>
+      <div class="t">
+        <div class="h">Бизнес</div>
+        <div class="p">от 50 000 ₽</div>
+        <div class="d">Многостраничник с каталогом, заявками и год обслуживания. Уровень демо.</div>
+      </div>
+      <div class="t">
+        <div class="h">Премиум</div>
+        <div class="p">от 100 000 ₽</div>
+        <div class="d">Бизнес + онлайн-бронь с календарём и/или оплата (ЮKassa).</div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer id="contact">
+      <div class="foot">
+        <div class="contacts">
+          <!-- EDIT: ваши реальные контакты -->
+          <a href="https://t.me/your_username" target="_blank" rel="noopener">Telegram</a>
+          <a href="https://wa.me/79280000000" target="_blank" rel="noopener">WhatsApp</a>
+          <a href="mailto:hello@example.ru">Email</a>
+        </div>
+        <div class="copy">© <span id="yr"></span> Аланика Студия</div>
+      </div>
+    </footer>
+
+  </div>
+
+  <script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
+</body>
+</html>

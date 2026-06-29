@@ -1,0 +1,93 @@
+name: Deploy portfolio + demos to GitHub Pages
+
+on:
+  push:
+    branches: ["main"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Allow only one concurrent deployment
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      # Project site -> "/<repo>/"; user/org site (<name>.github.io) -> "/"
+      - name: Compute base path
+        id: base
+        run: |
+          REPO="${{ github.event.repository.name }}"
+          if [[ "$REPO" == *.github.io ]]; then
+            echo "prefix=/" >> "$GITHUB_OUTPUT"
+          else
+            echo "prefix=/$REPO/" >> "$GITHUB_OUTPUT"
+          fi
+          echo "Using base prefix: $(grep prefix= "$GITHUB_OUTPUT")"
+
+      - name: Build · Аланские горные дома
+        working-directory: ossetia-cabins
+        env:
+          NUXT_APP_BASE_URL: ${{ steps.base.outputs.prefix }}ossetia-cabins/
+        run: |
+          npm install --no-audit --no-fund
+          npm run generate
+
+      - name: Build · Фарн (кафе)
+        working-directory: ossetia-cafe
+        env:
+          NUXT_APP_BASE_URL: ${{ steps.base.outputs.prefix }}ossetia-cafe/
+        run: |
+          npm install --no-audit --no-fund
+          npm run generate
+
+      - name: Build · Дикий Кавказ (туры)
+        working-directory: ossetia-tours
+        env:
+          NUXT_APP_BASE_URL: ${{ steps.base.outputs.prefix }}ossetia-tours/
+        run: |
+          npm install --no-audit --no-fund
+          npm run generate
+
+      - name: Assemble combined site
+        run: |
+          rm -rf _site
+          mkdir -p _site
+          # Landing page at the root
+          cp index.html _site/index.html
+          touch _site/.nojekyll
+          # Each demo into its own subfolder
+          cp -r ossetia-cabins/dist _site/ossetia-cabins
+          cp -r ossetia-cafe/dist   _site/ossetia-cafe
+          cp -r ossetia-tours/dist  _site/ossetia-tours
+          echo "Assembled tree:" && ls -la _site
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./_site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v5

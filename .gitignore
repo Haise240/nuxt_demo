@@ -1,0 +1,14 @@
+# dependencies & build output (all sub-projects)
+**/node_modules
+**/.nuxt
+**/.output
+**/dist
+**/.data
+
+# combined site assembled by CI
+_site
+
+# env & misc
+.env
+*.log
+.DS_Store

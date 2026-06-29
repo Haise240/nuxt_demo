@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    box-sizing: border-box;
+  }
+
+  body {
+    @apply font-sans font-light text-night bg-sand-50;
+    font-size: 16px;
+    line-height: 1.7;
+  }
+
+  h1, h2, h3, h4, h5 {
+    @apply font-display;
+  }
+
+  a {
+    @apply transition-colors duration-300;
+  }
+
+  img {
+    @apply block w-full;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-block px-10 py-4 bg-amber text-night font-sans font-semibold text-sm tracking-widest uppercase
+           transition-all duration-500 hover:bg-amber-dark hover:text-white hover:tracking-ultra
+           relative overflow-hidden;
+  }
+
+  .btn-outline {
+    @apply inline-block px-10 py-4 border border-amber text-amber font-sans font-semibold text-sm tracking-widest uppercase
+           transition-all duration-500 hover:bg-amber hover:text-night hover:tracking-ultra;
+  }
+
+  .btn-ghost {
+    @apply inline-block px-10 py-4 border border-sand-300 text-night font-sans font-semibold text-sm tracking-widest uppercase
+           transition-all duration-500 hover:border-amber hover:text-amber-dark hover:tracking-ultra;
+  }
+
+  .section-label {
+    @apply font-sans text-xs font-semibold tracking-ultra uppercase text-ice-dark mb-6;
+  }
+
+  .section-title {
+    @apply font-display text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-night;
+  }
+
+  .input-field {
+    @apply w-full bg-transparent border-b border-sand-300 py-3 px-0 font-sans text-sm font-light text-night
+           placeholder:text-night/30 focus:outline-none focus:border-amber transition-colors duration-300;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
