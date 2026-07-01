@@ -9,7 +9,7 @@
       <!-- Logo -->
       <NuxtLink to="/" class="flex flex-col leading-none group" aria-label="На главную">
         <span class="font-display text-2xl md:text-3xl font-semibold text-cream-50 tracking-wide group-hover:text-saffron transition-colors duration-300">
-          Фарн
+          Горный очаг
         </span>
         <span class="font-sans text-[10px] md:text-xs tracking-ultra uppercase text-saffron font-medium">
           осетинская кухня

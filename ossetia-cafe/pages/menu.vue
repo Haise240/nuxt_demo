@@ -51,7 +51,7 @@
 </template>
 
 <script setup lang="ts">
-useHead({ title: 'Меню — Фарн · осетинская кухня' })
+useHead({ title: 'Меню — Горный очаг · осетинская кухня' })
 
 const { getMenu } = useMenu()
 const menu = getMenu()

@@ -6,7 +6,7 @@
         <div class="md:col-span-5">
           <NuxtLink to="/" class="inline-block mb-6 group">
             <div class="font-display text-3xl font-semibold text-cream-50 tracking-wide group-hover:text-saffron transition-colors duration-300">
-              Фарн
+              Горный очаг
             </div>
             <div class="font-sans text-xs tracking-ultra uppercase text-saffron font-medium">
               осетинская кухня
@@ -52,11 +52,11 @@
             <a href="tel:+78672000000" class="font-sans text-sm font-light text-cream-300/80 hover:text-saffron transition-colors duration-300">
               +7 (8672) 00-00-00
             </a>
-            <a href="mailto:zakaz@farn-cafe.ru" class="font-sans text-sm font-light text-cream-300/80 hover:text-saffron transition-colors duration-300">
-              zakaz@farn-cafe.ru
+            <a href="mailto:zakaz@gorny-ochag.example" class="font-sans text-sm font-light text-cream-300/80 hover:text-saffron transition-colors duration-300">
+              zakaz@gorny-ochag.example
             </a>
             <p class="font-sans text-sm font-light text-cream-400/70 leading-relaxed mt-1">
-              Владикавказ, пр. Мира, 24
+              Владикавказ, исторический центр
             </p>
             <p class="font-sans text-sm font-light text-cream-400/70 leading-relaxed">
               Ежедневно 11:00 – 23:00
@@ -67,7 +67,7 @@
 
       <div class="border-t border-cream-200/10 mt-16 pt-8 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
         <p class="font-sans text-xs text-cream-400/60">
-          © {{ new Date().getFullYear() }} Фарн · Осетинская кухня. Демонстрационный сайт.
+          © {{ new Date().getFullYear() }} Горный очаг · Осетинская кухня. Демонстрационный сайт, названия и контакты вымышленные.
         </p>
         <p class="font-sans text-xs text-cream-400/60">Владикавказ · Северная Осетия</p>
       </div>

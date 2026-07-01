@@ -61,10 +61,10 @@
               +7 (928) 000-00-00
             </a>
             <a
-              href="mailto:hello@alanskie.ru"
+              href="mailto:hello@alanskie.example"
               class="font-jost text-sm font-light text-stone-400 hover:text-gold transition-colors duration-300"
             >
-              hello@alanskie.ru
+              hello@alanskie.example
             </a>
             <p class="font-jost text-sm font-light text-stone-500 leading-relaxed mt-1">
               Республика Северная Осетия–Алания
@@ -76,7 +76,7 @@
       <!-- Divider -->
       <div class="border-t border-stone-200/10 mt-16 pt-8 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
         <p class="font-jost text-xs text-stone-600">
-          © {{ new Date().getFullYear() }} Аланские горные дома. Все права защищены.
+          © {{ new Date().getFullYear() }} Аланские горные дома. Демонстрационный сайт, названия и контакты вымышленные.
         </p>
         <p class="font-jost text-xs text-stone-600">
           Северная Осетия · Алания · Кавказ

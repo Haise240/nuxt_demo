@@ -52,8 +52,8 @@
             <a href="tel:+79280000000" class="font-sans text-sm font-light text-sand-300/70 hover:text-amber transition-colors duration-300">
               +7 (928) 000-00-00
             </a>
-            <a href="mailto:go@dikiy-kavkaz.ru" class="font-sans text-sm font-light text-sand-300/70 hover:text-amber transition-colors duration-300">
-              go@dikiy-kavkaz.ru
+            <a href="mailto:go@dikiy-kavkaz.example" class="font-sans text-sm font-light text-sand-300/70 hover:text-amber transition-colors duration-300">
+              go@dikiy-kavkaz.example
             </a>
             <p class="font-sans text-sm font-light text-sand-400/60 leading-relaxed mt-1">
               Владикавказ, Северная Осетия
@@ -64,7 +64,7 @@
 
       <div class="border-t border-sand-200/10 mt-16 pt-8 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
         <p class="font-sans text-xs text-sand-400/50">
-          © {{ new Date().getFullYear() }} Дикий Кавказ. Демонстрационный сайт.
+          © {{ new Date().getFullYear() }} Дикий Кавказ. Демонстрационный сайт, названия и контакты вымышленные.
         </p>
         <p class="font-sans text-xs text-sand-400/50">Северная Осетия · Кавказ</p>
       </div>

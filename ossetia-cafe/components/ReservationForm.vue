@@ -147,7 +147,7 @@ async function handleSubmit() {
     time: form.time,
     guests: form.guests,
     message: form.message,
-    subject: 'Бронь столика — Фарн',
+    subject: 'Бронь столика — Горный очаг',
   })
   if (result.success) submitted.value = true
 }

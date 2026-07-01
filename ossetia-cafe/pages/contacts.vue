@@ -32,6 +32,7 @@
                 <a href="tel:+78672000000" class="font-display text-2xl text-cocoa hover:text-clay transition-colors duration-300">
                   +7 (8672) 00-00-00
                 </a>
+                <p class="font-sans text-[10px] text-cocoa/40 mt-0.5">Демо-номер, недействителен</p>
                 <p class="font-sans text-xs text-cocoa/50 mt-1">Звоните с 10:00 до 22:00</p>
               </div>
             </div>
@@ -46,9 +47,9 @@
               </div>
               <div>
                 <p class="font-sans text-xs tracking-widest uppercase text-clay mb-1">Адрес</p>
-                <p class="font-display text-2xl text-cocoa leading-tight">Владикавказ, пр. Мира, 24</p>
+                <p class="font-display text-2xl text-cocoa leading-tight">Владикавказ, исторический центр</p>
                 <p class="font-sans text-sm font-light text-cocoa/60 mt-2 leading-relaxed max-w-xs">
-                  Исторический центр, рядом с площадью Штыба. Есть парковка во дворе.
+                  Точный адрес и парковку пришлём при подтверждении брони.
                 </p>
               </div>
             </div>
@@ -110,7 +111,7 @@
 </template>
 
 <script setup lang="ts">
-useHead({ title: 'Контакты и бронь — Фарн · осетинская кухня' })
+useHead({ title: 'Контакты и бронь — Горный очаг · осетинская кухня' })
 
 const messengers = [
   { label: 'Telegram', href: '#' },

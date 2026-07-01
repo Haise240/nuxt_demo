@@ -45,8 +45,8 @@
               </div>
               <div>
                 <p class="font-sans text-xs tracking-widest uppercase text-ice-dark mb-1">Email</p>
-                <a href="mailto:go@dikiy-kavkaz.ru" class="font-display text-2xl font-bold text-night hover:text-amber transition-colors duration-300">
-                  go@dikiy-kavkaz.ru
+                <a href="mailto:go@dikiy-kavkaz.example" class="font-display text-2xl font-bold text-night hover:text-amber transition-colors duration-300">
+                  go@dikiy-kavkaz.example
                 </a>
                 <p class="font-sans text-xs text-night/50 mt-1">Ответим в течение часа</p>
               </div>

@@ -9,16 +9,16 @@ export default defineNuxtConfig({
     baseURL: process.env.NUXT_APP_BASE_URL || '/ossetia-cafe/',
     buildAssetsDir: '/_nuxt/',
     head: {
-      title: 'Фарн — осетинская кухня во Владикавказе',
+      title: 'Горный очаг — осетинская кухня во Владикавказе',
       meta: [
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
         {
           name: 'description',
           content:
-            'Фарн — ресторан осетинской кухни во Владикавказе. Осетинские пироги, шашлык, домашний сыр и горное гостеприимство. Бронь столика онлайн.',
+            'Горный очаг — кафе осетинской кухни во Владикавказе. Осетинские пироги, шашлык, домашний сыр и горное гостеприимство. Бронь столика онлайн.',
         },
-        { property: 'og:title', content: 'Фарн — осетинская кухня' },
+        { property: 'og:title', content: 'Горный очаг — осетинская кухня' },
         {
           property: 'og:description',
           content: 'Осетинские пироги, шашлык и домашняя кухня. Забронируйте столик.',

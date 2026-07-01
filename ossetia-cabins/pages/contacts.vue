@@ -55,10 +55,10 @@
               <div>
                 <p class="font-jost text-xs tracking-widest uppercase text-mist mb-1">Email</p>
                 <a
-                  href="mailto:hello@alanskie.ru"
+                  href="mailto:hello@alanskie.example"
                   class="font-cormorant text-2xl text-forest hover:text-gold transition-colors duration-300"
                 >
-                  hello@alanskie.ru
+                  hello@alanskie.example
                 </a>
                 <p class="font-jost text-xs text-stone-400 mt-1">
                   Ответим в течение часа
