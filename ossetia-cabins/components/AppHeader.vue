@@ -42,7 +42,11 @@
 </template>
 
 <script setup lang="ts">
-const scrolled = ref(false)
+// Initialize from the actual scroll position, not just false — otherwise a
+// page that mounts already scrolled (e.g. scroll offset carried over from
+// client-side navigation) shows the transparent header until the next
+// 'scroll' event fires.
+const scrolled = ref(import.meta.client ? window.scrollY > 60 : false)
 
 const navLinks = [
   { to: '/', label: 'Главная' },
