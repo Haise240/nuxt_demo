@@ -111,7 +111,7 @@
         </div>
 
         <!-- Right: Booking Form Sidebar -->
-        <div class="lg:col-span-4 lg:col-start-9">
+        <div class="lg:col-span-4 lg:col-start-9 self-start">
           <div class="sticky top-28">
             <div class="border border-stone-200 p-8 lg:p-10 bg-white shadow-sm">
               <!-- Price -->

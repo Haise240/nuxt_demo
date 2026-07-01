@@ -116,7 +116,7 @@
         </div>
 
         <!-- Right: Request Form -->
-        <div class="lg:col-span-4 lg:col-start-9">
+        <div class="lg:col-span-4 lg:col-start-9 self-start">
           <div class="sticky top-28">
             <div class="border border-sand-200 p-8 lg:p-10 bg-white shadow-sm">
               <div class="flex items-baseline gap-2 mb-1">
